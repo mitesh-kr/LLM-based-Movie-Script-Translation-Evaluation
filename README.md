@@ -119,15 +119,18 @@ category.
 This metric clearly shows that perplexity outperformed the other two LLMs
 followed byLLama 3.1 405B and mMERT in both translation tasks and for
 both BLEU and ROUGE scores.
+
 LLM Selection: LLama 3.1 and perplexity are the most used llms for any
 type of work and are easily available open source for use . MERT was
 chosen because it’s one of the llm speciality used for translation and it
 shows strong results in other translation benchmarks.
+
 Language Choice: German and Polish were chosen because both
 languages represent significant markets for translated media, particularly
 Tollywood films. Evaluating translation performance in these languages
 helps ensure that models can handle translation tasks relevant to
 real-world demands and cultural preferences in media consumption.
+
 Evaluation Metrics: BLEU and ROUGE were chosen because they are
 commonly used to evaluate translation quality. BLEU measures how similar
 the translated text is to the reference by checking groups of words
