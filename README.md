@@ -36,13 +36,7 @@ Dubbing and subtitling are crucial for expanding the reach of Tollywood films to
 ├── requirements.txt
 ├── script.txt                # Sample script for testing
 └── results/
-    ├── translation_scores.csv
-    ├── translation_scores.md
-    ├── win_rates.csv
-    ├── win_rates.md
     ├── score_comparison.png
-    ├── win_rates.png
-    └── comparison_table.html
 ```
 
 
