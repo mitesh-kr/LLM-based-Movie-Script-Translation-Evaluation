@@ -2,6 +2,8 @@
 
 This project evaluates different Large Language Models (LLMs) for translating Tollywood movie scripts into international languages. Specifically, it evaluates how well different LLMs perform at translating a sample script (based on "RRR") into German and Polish.
 
+## [Google Colab Link](https://colab.research.google.com/drive/1fqY9RkePMC-dzhF36WsGHxDcerYmRqV6?usp=sharing)
+
 ## Overview
 
 Dubbing and subtitling are crucial for expanding the reach of Tollywood films to international audiences. This project aims to identify which LLM provides the best translation quality for this purpose.
