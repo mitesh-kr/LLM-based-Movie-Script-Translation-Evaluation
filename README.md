@@ -100,7 +100,47 @@ The Mean Win Rate metric is calculated by:
 
 ## Results
 
+
+| Task | LLM | BLEU Score | ROUGE Score | BLEU Win | ROUGE Win | Total Wins | Total Comparisons | Mean Win Rate (%) |
+|------|-----|------------|-------------|----------|-----------|------------|-------------------|-------------------|
+| German Translation | LLama 3.1 405B | 0.5268 | 0.7643 | 0 | 0 | 0 | 2 | 0% |
+| | Perplexity | 0.5915 | 0.8036 | 1 | 1 | 2 | 2 | 100% |
+| | mMERT | 0.3556 | 0.6444 | 0 | 0 | 0 | 2 | 0% |
+| Polish Translation | LLama 3.1 405B | 0.4744 | 0.7394 | 0 | 0 | 0 | 2 | 0% |
+| | Perplexity | 0.5995 | 0.8083 | 1 | 1 | 2 | 2 | 100% |
+| | mMERT | 0.2726 | 0.5755 | 0 | 0 | 0 | 2 | 0% |
+
 The performance comparison visualizations can be found in the `results/` directory after running the main script.
+## Interpretation
+perplexity has the highest Mean Win Rate of 1 for both translation tasks,
+indicating it performed the best across all tasks and metrics. Both LLama
+3.1 405B and mMERT have a Mean Win Rate of 0, as they didn't win in any
+category.
+This metric clearly shows that perplexity outperformed the other two LLMs
+followed byLLama 3.1 405B and mMERT in both translation tasks and for
+both BLEU and ROUGE scores.
+LLM Selection: LLama 3.1 and perplexity are the most used llms for any
+type of work and are easily available open source for use . MERT was
+chosen because it’s one of the llm speciality used for translation and it
+shows strong results in other translation benchmarks.
+Language Choice: German and Polish were chosen because both
+languages represent significant markets for translated media, particularly
+Tollywood films. Evaluating translation performance in these languages
+helps ensure that models can handle translation tasks relevant to
+real-world demands and cultural preferences in media consumption.
+Evaluation Metrics: BLEU and ROUGE were chosen because they are
+commonly used to evaluate translation quality. BLEU measures how similar
+the translated text is to the reference by checking groups of words
+(n-grams), and in this case, we are using groups of 4 words. ROUGE
+focuses on recall, which checks if the important parts of the original text are
+included in the translation. This helps make sure the translation captures
+the key information.
+For this dubbing task i have chosen, three LLM LLama 3.1 405B,
+perplexity and mMERT. For ground truth translation from ChatGPT is being
+used.
+An initial 100 sentences are being used for this evaluation task.
+For the Blue score 4-gram score has been considered and the rouge L F1
+score has been considered.
 
 ## Notes
 - ChatGPT translations are used as ground truth for evaluation
