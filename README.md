@@ -50,6 +50,8 @@ Dubbing and subtitling are crucial for expanding the reach of Tollywood films to
 
 1. Install dependencies:
    ```
+   git clone https://github.com/mitesh-kr/LLM-based-Movie-Script-Translation-Evaluation.git
+   cd LLM-based-Movie-Script-Translation-Evaluation
    pip install -r requirements.txt
    ```
 
