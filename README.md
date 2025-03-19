@@ -63,7 +63,7 @@ Dubbing and subtitling are crucial for expanding the reach of Tollywood films to
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/tollywood-translation-evaluation.git
+git clone https://github.com/mitesh-kr/tollywood-translation-evaluation.git
 cd tollywood-translation-evaluation
 
 # Install dependencies
