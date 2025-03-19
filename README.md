@@ -45,67 +45,62 @@ Dubbing and subtitling are crucial for expanding the reach of Tollywood films to
     └── comparison_table.html
 ```
 
-## Rationale
 
-### LLM Selection
+## Setup and Execution
 
-- **LLama 3.1 405B**: One of the most advanced open-source models with excellent general text generation capabilities
-- **Perplexity**: Known for strong performance in translation tasks and high accuracy
-- **mMERT**: Specialized in multilingual translation tasks with strong results in benchmark tests
+1. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-### Language Choice
+2. Place your English script in `data/english_script.txt` or use the default sample.
 
-- **German**: Represents a significant European market for international films
-- **Polish**: Another important European market with different linguistic challenges from German
+3. Run the main script:
+   ```
+   python main.py
+   ```
 
-### Evaluation Metrics
+## Task Details
 
-- **BLEU Score**: Industry standard metric for measuring translation quality by comparing n-grams
-- **ROUGE-L F1 Score**: Focuses on the longest common subsequence, which better captures sentence structure preservation
+### a) Selected LLMs
+- LLama 3.1 405B
+- Perplexity
+- mBERT (Facebook's mBART-large-50-many-to-many-mmt)
 
-## Installation
+### b) Target Languages
+- German
+- Polish
 
-```bash
-# Clone the repository
-git clone https://github.com/mitesh-kr/tollywood-translation-evaluation.git
-cd tollywood-translation-evaluation
+### c) Evaluation Metrics
+- BLEU Score (4-gram)
+- ROUGE-L F1 Score
 
-# Install dependencies
-pip install -r requirements.txt
-```
+### d) Mean Win Rate Results
+The Mean Win Rate metric is calculated by:
+1. Counting the number of wins for each model across all metrics and languages
+2. Dividing by the total number of comparisons
+3. Expressing as a percentage
 
-## Usage
+### e) Rationale for Choices
 
-1. First, generate a sample script (if you don't have a real one):
+**LLM Selection:**
+- LLama 3.1 405B and Perplexity were chosen as they are widely used, open-source LLMs with strong performance
+- mBERT was selected specifically for its multilingual capabilities and prior success in translation tasks
 
-```bash
-python create_sample_script.py --sentences 100 --output script.txt
-```
+**Language Choice:**
+- German and Polish represent significant markets for translated media
+- These languages offer different linguistic challenges, providing a good test of model robustness
 
-2. Run the evaluation:
-
-```bash
-python main.py --input script.txt --languages German Polish --llms LLama_3.1_405B perplexity mMERT --num_sentences 100 --output_dir results
-```
+**Evaluation Metrics:**
+- BLEU Score measures similarity between translations using n-grams (groups of 4 words)
+- ROUGE-L F1 Score focuses on capturing key information through longest common subsequence matching
+- These complementary metrics provide a comprehensive evaluation of translation quality
 
 ## Results
 
-The evaluation shows that Perplexity outperforms the other models with a Mean Win Rate of 100%, followed by LLama 3.1 405B and mMERT. Detailed results can be found in the `results` directory.
+The performance comparison visualizations can be found in the `results/` directory after running the main script.
 
-## Citation
+## Notes
+- ChatGPT translations are used as ground truth for evaluation
+- The script processes at least the first 100 sentences of the movie script as required
 
-If you use this code or methodology in your work, please cite:
-
-```
-@misc{tollywood-translation-evaluation,
-  author = {Your Name},
-  title = {Evaluation of LLMs for Tollywood Movie Script Translation},
-  year = {2025},
-  publisher = {GitHub},
-  url = {https://github.com/yourusername/tollywood-translation-evaluation}
-}
-```
-
-## License
-
-MIT License
