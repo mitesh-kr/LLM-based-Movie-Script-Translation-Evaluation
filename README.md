@@ -18,6 +18,8 @@ Dubbing and subtitling are crucial for expanding the reach of Tollywood films to
 - Uses appropriate metrics for evaluation:
   - BLEU score (4-gram)
   - ROUGE-L F1 score
+- Ground Truth
+  - ChatGPT-4
 - Calculates Mean Win Rate to rank the models
 
 ## Project Structure
